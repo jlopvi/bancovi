@@ -12,6 +12,7 @@ html(lang="es")
                 - var title = "Bandejas"
                 - var icon = "icon-inbox"
                 include includes/sectionHeader.pug
+                // START_TABS
                 ul.app__tab.d-flex
                     li.app__tab__item.has-text-centered.col-6.py-3.px-2.is-size-5.has-text-weight-bold.is-active
                         span.icon.icon-credit-card
@@ -19,7 +20,7 @@ html(lang="es")
                     li.app__tab__item.has-text-centered.col-6.py-3.px-2.is-size-5.has-text-weight-bold
                         span.icon.icon-conversation
                         | Solicitudes de Contáctenos
-
+                // END_TABS
             section.app__container.pt-3.overflow-hidden
                 .d-flex.h-100.overflow-hidden
                     .col-4.px-0.h-100.overflow-hidden
@@ -27,8 +28,25 @@ html(lang="es")
                             .text-center.has-background-light.py-3.px-2
                                 h6.has-text-weight-bold.has-text-primary Solicitudes
                             div.h-100.overflow-hidden
+                                // START_LIST_INBOX
                                 ul.app__list__styled.h-100.overflow-auto
+                                    // CSS_CLASS_VARIANTES
+                                    //  
+                                        CLASS app__list__styled__item o app__list__styled__item__link
+                                        EJEMPLO DE CLASS class="app__list__styled__item is-new"
+                                        VARIANTES
+                                        is-new     : Para elementos nuevos
+                                        is-current : Para elemento seleccionado
+                                        is-visited : Para elementos abiertos
+                                        IMPORTANTE
+                                        Si el <li class="app__list__styled__item"> tiene como hijo un <a class="app__list__styled__item__link">
+                                        Agregar la calse variante a app__list__styled__item__link
+                                        EJEMPLO 
+                                        ...
+                                            <li class="app__list__styled__item">
+                                                <a class="app__list__styled__item__link is-new"> ...
                                     - for (var i = 0; i < 3; ++i) {
+                                        // START_LIST_ITEM_NEW
                                         li.app__list__styled__item
                                             a.app__list__styled__item__link.is-new.px-3.py-2.d-flex.align-items-center(href="#")
                                                 div.mr-auto
@@ -37,19 +55,22 @@ html(lang="es")
                                                     p 17 / 10 / 2019 - 10:15am
                                                 .ml-2
                                                     span.app__list__styled__item__icon.icon-mail
+                                        // START_LIST_ITEM_NEW
 
                                     - }
                                     - for (var i = 0; i < 1; ++i) {
+                                        // START_LIST_ITEM_CURRENT
                                         li.app__list__styled__item
                                             a.app__list__styled__item__link.is-current.px-3.py-2.d-flex.align-items-center(href="#")
                                                 div.mr-auto
                                                     h3.app__list__styled__item__title.has-text-warning.is-size-5.has-text-weight-bold Producto Premium
                                                     p.app__list__styled__items__subtitle.has-text-weight-bold.is-size-6 Ahorro VIP Personal
                                                     p 10 / 10 / 2019 - 9:37am
-
+                                        // END_LIST_ITEM_CURRENT
                                     - }
                                     //-  icon-main-open
                                     - for (var i = 0; i < 5; ++i) {
+                                        // START_LIST_ITEM_VISITED
                                         li.app__list__styled__item
                                             a.app__list__styled__item__link.is-visited.px-3.py-2.d-flex.align-items-center(href="#")
                                                 div.mr-auto
@@ -59,8 +80,9 @@ html(lang="es")
                                                 .ml-2.d-flex
                                                     span.app__list__styled__item__icon.icon-like
                                                     span.app__list__styled__item__icon.icon-main-open
-
+                                        // END_LIST_ITEM_VISITED
                                     - }
+                                // END_LIST_INBOX
                     .col-8.px-3.h-100.overflow-hidden
                         .position-relative.py-1.h-100
 
