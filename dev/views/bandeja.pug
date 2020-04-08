@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="/css/bancoviIcons.css")
+        link(rel="stylesheet", href="/css/app.css")
+    body
+        .app__section.container.overflow-hidden
+            div
+                - var title = "Bandejas"
+                - var icon = "icon-inbox"
+                include includes/sectionHeader.pug
+                ul.app__tab.d-flex
+                    li.app__tab__item.has-text-centered.col-6.py-3.px-2.is-size-5.has-text-weight-bold.is-active
+                        span.icon.icon-credit-card
+                        | Solicitudes de Productos BANCOVI
+                    li.app__tab__item.has-text-centered.col-6.py-3.px-2.is-size-5.has-text-weight-bold
+                        span.icon.icon-conversation
+                        | Solicitudes de Contáctenos
+
+            section.app__container.pt-3.overflow-hidden
+                .d-flex.h-100.overflow-hidden
+                    .col-4.px-0.h-100.overflow-hidden
+                        .app__list__grid.overflow-hidden
+                            .text-center.has-background-light.py-3.px-2
+                                h6.has-text-weight-bold.has-text-primary Solicitudes
+                            div.h-100.overflow-hidden
+                                ul.app__list__styled.h-100.overflow-auto
+                                    - for (var i = 0; i < 3; ++i) {
+                                        li.app__list__styled__item
+                                            a.app__list__styled__item__link.is-new.px-3.py-2.d-flex.align-items-center(href="#")
+                                                div.mr-auto
+                                                    h3.app__list__styled__item__title.has-text-warning.is-size-5.has-text-weight-bold Líneas de Crédito
+                                                    p.app__list__styled__items__subtitle.has-text-weight-bold.is-size-6 Crédito Empresarial
+                                                    p 17 / 10 / 2019 - 10:15am
+                                                .ml-2
+                                                    span.app__list__styled__item__icon.icon-mail
+
+                                    - }
+                                    - for (var i = 0; i < 1; ++i) {
+                                        li.app__list__styled__item
+                                            a.app__list__styled__item__link.is-current.px-3.py-2.d-flex.align-items-center(href="#")
+                                                div.mr-auto
+                                                    h3.app__list__styled__item__title.has-text-warning.is-size-5.has-text-weight-bold Producto Premium
+                                                    p.app__list__styled__items__subtitle.has-text-weight-bold.is-size-6 Ahorro VIP Personal
+                                                    p 10 / 10 / 2019 - 9:37am
+
+                                    - }
+                                    //-  icon-main-open
+                                    - for (var i = 0; i < 5; ++i) {
+                                        li.app__list__styled__item
+                                            a.app__list__styled__item__link.is-visited.px-3.py-2.d-flex.align-items-center(href="#")
+                                                div.mr-auto
+                                                    h3.app__list__styled__item__title.is-size-5.has-text-weight-bold Producto Premium
+                                                    p.app__list__styled__items__subtitle.has-text-weight-bold.is-size-6 Ahorro VIP Personal
+                                                    p 10 / 10 / 2019 - 9:37am
+                                                .ml-2.d-flex
+                                                    span.app__list__styled__item__icon.icon-like
+                                                    span.app__list__styled__item__icon.icon-main-open
+
+                                    - }
+                    .col-8.px-3.h-100.overflow-hidden
+                        .position-relative.py-1.h-100
+
+                            // START_Controls_Message
+                            .app__controls__bottom.d-flex.justify-content-around.py-2
+                                .col-4.px-4
+                                    button.w-100.app__btn.has-icon-big 
+                                        span.icon.icon-excel
+                                        | Descargar Excel
+                                .col-4.px-4
+                                    button.w-100.app__btn.has-icon-big 
+                                        span.icon.icon-pdf
+                                        | Descargar PDF
+                                .col-4.px-4
+                                    button.w-100.app__btn.is-primary.has-icon-big
+                                        span.icon.icon-like.has-text-warning
+                                        | Resuelto
+                            // END_Controls_Message
+                           
+                            .app__controls__sibling.h-100.overflow-auto
+
+                                // START_Client_Data
+                                .text-center.has-background-light.py-3.px-2
+                                    h6.has-text-weight-bold.has-text-primary Datos del cliente
+                                .d-flex.flex-wrap.px-4.py-2 
+                                    .col-6.col-lg-3.px-2
+                                        div.mb-3
+                                            p.has-text-weight-bold Nombre del cliente:
+                                            p José Amilcar Alas Pérez
+                                        div.mb-3
+                                            p.has-text-weight-bold DUI:
+                                            p 12345678-0
+                                        div.mb-3
+                                            p.has-text-weight-bold Teléfono:
+                                            p +503 7777-7777
+                                    .col-6.col-lg-3.px-2
+                                        div.mb-3
+                                            p.has-text-weight-bold NIT:
+                                            p 1234-1234-123-3
+                                        div.mb-3
+                                            p.has-text-weight-bold email:
+                                            p Mauricio@gmail.com
+                                        div.mb-3
+                                            p.has-text-weight-bold Agencia:
+                                            p Salvador del Mundo
+                                    .col-6.col-lg-3.px-2
+                                        div.mb-3
+                                            p.has-text-weight-bold Previsualización:
+                                            .app__inbox__file__preview.border.rounded.overflow-hidden.mb-2
+                                                img.w-100(src="https://www.researchgate.net/profile/Marcos_Schliewe2/publication/317235809/figure/fig1/AS:499702031892480@1496149656124/Figura-2-Comprovante-de-Pagamento-Fonte-Facebook-2014.png")
+                                            button.w-100.app__btn.is-primary.has-icon-big.is-small
+                                                span.icon.icon-download
+                                                span.mt-n2 Descargar
+                                    .col-6.col-lg-3.px-2
+                                        div.mb-3
+                                            p.has-text-weight-bold Estatus:
+                                            select#status(name="status").app__form__control.w-100
+                                                option(value="1") Opcion 1
+                                                option(value="2") Opcion 2
+                                // END_Client_Data
+                                 
+                                // START_Message_box
+                                .text-center.has-background-light.py-3.px-2
+                                    h6.has-text-weight-bold.has-text-primary Mensaje
+                                .py-2
+
+                                    .border.p-3.has-text-primary.rounded
+                                        p Hola señores de BANCOVI,
+                                        p Me pongo en contacto con ustedes para solicitar el producto de Ahorro VIP Personal.
+                                        p Por favor, contactarme.
+                                        p Muchas gracias.
+                                // END_Message_box
+                                   
