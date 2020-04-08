@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Notificaciones web
+        link(rel="stylesheet", href="/css/bancoviIcons.css")
+        link(rel="stylesheet", href="/css/app.css")
+    body
+        include mixin/button.pug
+        .app__section.container-fluid.overflow-hidden
+            div
+                - var title = "Notificaciones"
+                - var icon = "icon-bell"
+                include includes/sectionHeader.pug
+                // START_TABS
+                ul.app__tab.d-flex
+                    li.app__tab__item.has-text-centered.col-3.py-3.px-2.is-size-6.has-text-weight-bold.is-active
+                        span.icon.icon-world
+                        | Notificaciones Web
+                    li.app__tab__item.has-text-centered.col-3.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-chat
+                        | Notificaciones Push
+                    li.app__tab__item.has-text-centered.col-3.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-main-open
+                        | Notificaciones Mail
+                    li.app__tab__item.has-text-centered.col-3.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-history
+                        | Historial
+                // END_TABS
+            section.overflow-hidden.pt-1
+                .d-flex.h-100
+                    // START_PASOS
+                    //
+                        CLASS .app__step
+                        VARIANT 
+                        .is-prev    :   Paso anterior por defecto tiene fondo gris 
+                                        pero se pueden usar con las clases de bulma en 
+                                        https://bulma.io/documentation/modifiers/color-helpers/#background-color
+                        
+                        .is-current :   Paso Actual por defecto tiene el color verde claro 
+                                        pero igual se pueden usar las clases de bulma 
+                                        https://bulma.io/documentation/modifiers/color-helpers/#background-color
+                        
+                        .is-next    :   Paso Siguiente
+
+                    .col-3.h-100.overflow-auto.py-3.px-4.app__step.is-prev
+                        h6.app__step__title.has-text-centered
+                            span.app__step__number 1
+                            span Ingreso de Datos
+                        .w-90.mx-auto
+                            .py-3
+                                h4.has-text-centered.has-text-weight-bold Título:
+                                div
+                                    input.app__form__control.is-lite.w-100(name="title")
+                            .py-3
+                                h4.has-text-centered.has-text-weight-bold Cuerpo:
+                                div
+                                    textarea.app__form__control.is-lite.w-100#textpromo(name="textpromo", rows="10")
+                                +button('Agregar Image', 'icon-image', 'w-100 has-icon-big mb-2')
+                                +button('Siguiente', '', 'is-primary w-100 has-icon-big ' )
+                    .col-6.h-100.overflow-auto.py-3.px-4.app__step.is-prev.has-background-white
+                        h6.app__step__title.has-text-centered
+                            span.app__step__number 2
+                            span Selección de clientes
+                        .w-90.mx-auto
+                            .py-3
+                                p.has-text-centered Filtrado por tipo de producto
+                                div
+                                    select.app__form__control.w-100.is-lite.has-border-primary.has-text-centered#filterByProduct(name="filterByProduct", placeholder="Seleccione una opción", style="text-align-last: center;", disabled)
+                                        option(disabled, selected) Seleccione una opción
+                                        option(value="Cuenta Inversión") Cuenta Inversión 1
+                                        option(value="Cuenta Inversión") Cuenta Inversión 2
+                                        option(value="Cuenta Inversión") Cuenta Inversión 3
+                            .py-3
+                                p.has-text-centered Listado de clientes
+                                table.app__table.is-empty.has-broder-radius.w-100
+                                    thead
+                                        tr
+                                            th(style="width: 25px")
+                                                label.app__checkbox
+                                                    input(type="checkbox", disabled)
+                                                    span.app__checkbox__input
+                                            th(align="center") Nombre
+                                            th(align="center") Nombre de usuario
+                                    tbody
+                                        - for (var i=0; i < 5; i++) {
+                                            tr
+                                                td(style="width: 25px") 
+                                                    label.app__checkbox
+                                                        input(type="checkbox", disabled)
+                                                        span.app__checkbox__input
+                                                td
+                                                td
+                                        - }
+                            .py-3
+                                .d-flex.justify-content-center
+                                    .col-12.col-md-8.col-lg-6
+                                        .px-1
+                                            +button('Exportar a Excel', 'icon-excel', 'is-disabled has-icon-big w-100')
+                                        .d-flex
+                                            .col-6.py-2.px-1
+                                                +button('Atrás', '', 'is-primary w-100')
+                                            .col-6.py-2.px-1
+                                                +button('Siguiente', '', 'is-disabled w-100')
+                            .py-3
+                                p.has-text-centered Listado de clientes
+                                table.app__table.has-broder-radius.w-100
+                                    thead
+                                        tr
+                                            th(style="width: 25px")
+                                                label.app__checkbox
+                                                    input(type="checkbox")
+                                                    span.app__checkbox__input
+                                            th(align="center") Nombre
+                                            th(align="center") Nombre de usuario
+                                    tbody
+                                        - for (var i=0; i < 5; i++) {
+                                            tr
+                                                td 
+                                                    label.app__checkbox
+                                                        input(type="checkbox")
+                                                        span.app__checkbox__input
+                                                td  Alberto Antonio Cuestas Menjívar
+                                                td(align="center")  AanCe2341
+                                        - }
+                            .py-3
+                                .d-flex.justify-content-center
+                                    .col-12.col-md-8.col-lg-6
+                                        .px-1
+                                            +button('Exportar a Excel', 'icon-excel has-text-warning', 'is-primary has-icon-big w-100')
+                                        .d-flex
+                                            .col-6.py-2.px-1
+                                                +button('Atrás', '', 'is-primary w-100')
+                                            .col-6.py-2.px-1
+                                                +button('Siguiente', '', 'is-primary w-100')
+
+
+                    .col-3.h-100.overflow-hidden.py-3.px-4.app__step.is-current
+                        h6.app__step__title.has-text-centered
+                            span.app__step__number 3
+                            span Revisión y envío
+                        .w-90.mx-auto
+                            .py-3.has-text-centered
+                                p Revisa que todos los datos sean correctos, luego presiona el botón para enviar la notificación.
+                            .py-3.has-text-centered
+                                h6.has-text-weight-bold Título de notificación:
+                                p ¡Gánate una camioneta!
+                            .py-3.has-text-centered
+                                h6.has-text-weight-bold Imagen:
+                                p IMG_0687.JPG
+                            .py-3.has-text-centered
+                                h6.has-text-weight-bold Clientes con producto:
+                                p Depósito a Plazo
+                            .py-3.has-text-centered
+                                h6.has-text-weight-bold Cantidad de receptores:
+                                p 794
+                            .py-3.has-text-centered
+                                div
+                                    +button('Corregir', '')
+                                .py-2
+                                    +button('Enviar', 'icon-send has-text-warning', 'is-primary has-icon-big w-100')
+

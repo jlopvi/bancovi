@@ -7,12 +7,14 @@ html(lang="es")
         link(rel="stylesheet", href="/css/bancoviIcons.css")
         link(rel="stylesheet", href="/css/app.css")
     body
-        .app__section.container.overflow-hidden
+        include mixin/button.pug
+        .app__section.container-fluid.overflow-hidden
             div
                 - var title = "Bandejas"
                 - var icon = "icon-inbox"
                 include includes/sectionHeader.pug
                 // START_TABS
+                
                 ul.app__tab.d-flex
                     li.app__tab__item.has-text-centered.col-6.py-3.px-2.is-size-5.has-text-weight-bold.is-active
                         span.icon.icon-credit-card
@@ -89,17 +91,18 @@ html(lang="es")
                             // START_Controls_Message
                             .app__controls__bottom.d-flex.justify-content-around.py-2
                                 .col-4.px-4
-                                    button.w-100.app__btn.has-icon-big 
-                                        span.icon.icon-excel
-                                        | Descargar Excel
+                                    +button('Descargar Excel', 
+                                        'icon-excel', 
+                                        'w-100 has-icon-big')
                                 .col-4.px-4
-                                    button.w-100.app__btn.has-icon-big 
-                                        span.icon.icon-pdf
-                                        | Descargar PDF
+                                    +button('Descargar PDF', 
+                                        'icon-pdf', 
+                                        'w-100 has-icon-big')
+                                
                                 .col-4.px-4
-                                    button.w-100.app__btn.is-primary.has-icon-big
-                                        span.icon.icon-like.has-text-warning
-                                        | Resuelto
+                                    +button('Resuelto', 
+                                        'icon-like has-text-warning', 
+                                        'w-100 has-icon-big is-primary')
                             // END_Controls_Message
                            
                             .app__controls__sibling.h-100.overflow-auto

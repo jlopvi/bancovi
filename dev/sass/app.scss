@@ -12,6 +12,69 @@ body{
 }
 
 .app{
+    &__table{
+        border-spacing: 3px;
+        border-collapse: separate;
+        thead{
+            tr{
+                th{
+                    padding: 0.5em;
+                    text-align: center;
+                    font-size: 0.9em;
+                    background-color: $primary;
+                    color: #fff;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    padding: 0.5em;
+                    background-color:#F2F2F2;
+                }
+            }
+        }
+        &.has-broder-radius{
+            thead{
+                tr{
+                    &:first-child {
+                        th{
+                            &:first-child{
+                                border-radius: 0.55em 0 0 0;
+                            }
+                            &:last-child{
+                                border-radius: 0 0.55em 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    &:last-child{
+                        td{
+                            &:first-child{
+                                border-radius: 0 0 0 0.55em;
+                            }
+                            &:last-child{
+                                border-radius: 0 0 0.55em 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.is-empty{
+            th{
+                background-color: $disabled;
+                color: #fff;
+            }
+            td{
+                border: 2px solid #fff;
+                background-color:#F2F2F2;
+            }
+        }
+    }
     &__section{
         height: 100vh;
         display: grid;
@@ -36,6 +99,7 @@ body{
             background-color: #CCE7EA;
             transition: background-color 0.3s;
             cursor: pointer;
+            border-left: 1px solid #fff;
             .icon{
                 display: inline-block;
                 font-size: 1.5em;
@@ -49,6 +113,10 @@ body{
                 background-color: $primary;
                 color: #ffffff;
                 box-shadow: inset 0 -4px $warning;
+            }
+
+            &:first-child{
+                border-left: 0;
             }
             
         }
@@ -66,6 +134,56 @@ body{
             & + .app__controls__sibling{
                padding-bottom: $space;
             }
+        }
+    }
+    &__step{
+        &.is-current{
+            background-color: $primary-lo;
+            color: $primary;
+            .app__step{
+                &__title{
+                    color: $primary;
+                }
+            }
+        }
+        &.is-prev{
+            color: $disabled;
+            background-color: hsl(0, 0%, 96%);
+            .app__step{
+                &__title{
+                    color: $disabled;
+                }
+            }
+        }
+        &.is-next{
+            color: $disabled;
+            .app__step{
+                &__title{
+                    color: $disabled;
+                }
+            }
+        }
+        &__title{
+            font-size: 1.2em;
+            font-weight: 700;
+            &.is-primary{
+                color: $primary;
+                .app__step__number{
+                    background-color: #fff;
+                }
+            }
+        }
+        &__number{
+            border: 1px solid;
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+            text-align: center;
+            border-radius: 50%;
+            vertical-align: top;
+            margin-right: 0.5em;
+            background-color: #fff;
         }
     }
 }
@@ -90,6 +208,23 @@ select{
             border-radius: 0.55em;
             outline: none !important;
             font-size: 1.2em;
+           
+            &.is-lite{
+                border: 0 none;
+                background-color: #fff;
+            }
+            &.has{
+                &-border{
+                    &-primary{
+                        border: 1px solid $primary;
+                    }
+                }
+            }
+            &:disabled{
+                border: 1px solid $disabled;
+                color: $disabled;
+                background-color: #fff;
+            }
         }
     }
     &__btn{
@@ -107,6 +242,13 @@ select{
         transform: scale(1);
         cursor: pointer;
         transform-origin: center bottom;
+        &:disabled{
+            cursor: not-allowed;
+            background-color: #fff;
+            color: $disabled;
+            box-shadow: none;
+            border: 1px solid $disabled;
+        }
         &:active{
             box-shadow: inset 0 -1px $primary;
             transform: scale(0.95);
@@ -134,9 +276,73 @@ select{
                     box-shadow: inset 0 -1px darken($primary, $amount: 10);
                 }
             }
+            &-disabled{
+                cursor: not-allowed;
+                background-color: #fff;
+                color: $disabled;
+                box-shadow: none;
+                border: 1px solid $disabled;
+            }
             &-small{
                 padding: 0.25em 0.5em;
                 font-size: 0.9em;
+            }
+        }
+    }
+    &__checkbox{
+        display: inline-block;
+        &__input{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 0.25em;
+            position: relative;
+            color: $primary;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid $primary;
+            &::before{
+                content: "\e908";
+                font-family: 'bancovi' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                font-size: 1.8em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-45%) scale(0);
+                transition: transform 0.3s;
+            }
+            &.is-active{
+                transform: translateX(-50%) translateY(-45%) scale(1);
+            }
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: none;
+            &:checked{
+                & + .app__checkbox__input{
+                    
+                    background-color: $primary;
+                    color: #fff;
+                    &::before{
+                        transform: translateX(-50%) translateY(-45%) scale(1);
+                    }
+                }
+            }
+            &:disabled{
+                & + .app__checkbox__input{
+                    cursor: not-allowed;
+                    background-color: #fff;
+                    color: #fff;
+                    border: 1px solid $disabled;
+                    
+                }
             }
         }
     }
@@ -147,3 +353,4 @@ select{
         overflow: hidden;
     }
 }
+

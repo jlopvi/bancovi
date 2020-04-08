@@ -1,0 +1,7 @@
+mixin button(text, icon, className, iconPosition)
+    button(class="app__btn "+ className)
+        if (!iconPosition || iconPosition == '' || iconPosition == 'left') && icon != ""
+            span(class="icon "+ icon)
+        span= text
+        if iconPosition == 'right' && icon != ""
+            span(class="icon "+ icon)
