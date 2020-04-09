@@ -74,25 +74,26 @@ html(lang="es")
                                         option(value="Cuenta Inversión") Cuenta Inversión 3
                             .py-3
                                 p.has-text-centered Listado de clientes
-                                table.app__table.is-empty.has-broder-radius.w-100
-                                    thead
-                                        tr
-                                            th(style="width: 25px")
-                                                label.app__checkbox
-                                                    input(type="checkbox", disabled)
-                                                    span.app__checkbox__input
-                                            th(align="center") Nombre
-                                            th(align="center") Nombre de usuario
-                                    tbody
-                                        - for (var i=0; i < 5; i++) {
+                                .mh-p-500.overflow-auto
+                                    table.app__table.is-empty.has-broder-radius.w-100
+                                        thead
                                             tr
-                                                td(style="width: 25px") 
+                                                th(style="width: 25px")
                                                     label.app__checkbox
                                                         input(type="checkbox", disabled)
                                                         span.app__checkbox__input
-                                                td
-                                                td
-                                        - }
+                                                th(align="center") Nombre
+                                                th(align="center") Nombre de usuario
+                                        tbody
+                                            - for (var i=0; i < 55; i++) {
+                                                tr
+                                                    td(style="width: 25px") 
+                                                        label.app__checkbox
+                                                            input(type="checkbox", disabled)
+                                                            span.app__checkbox__input
+                                                    td
+                                                    td
+                                            - }
                             .py-3
                                 .d-flex.justify-content-center
                                     .col-12.col-md-8.col-lg-6
@@ -136,7 +137,7 @@ html(lang="es")
                                                 +button('Siguiente', '', 'is-primary w-100')
 
 
-                    .col-3.h-100.overflow-hidden.py-3.px-4.app__step.is-current
+                    .col-3.h-100.overflow-auto.py-3.px-4.app__step.is-current
                         h6.app__step__title.has-text-centered
                             span.app__step__number 3
                             span Revisión y envío

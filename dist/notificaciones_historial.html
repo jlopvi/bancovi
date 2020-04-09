@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Notificaciones Historial</title>
+    <link rel="stylesheet" href="/css/bancoviIcons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+  </head>
+  <body>
+    <div class="app__section container-fluid overflow-hidden">
+      <div>
+        <div class="app__section__header">
+          <h6 class="section__header__title has-text-centered has-text-primary is-uppercase has-text-weight-bold"><span class="icon icon-bell"></span>Notificaciones</h6>
+        </div>
+        <!-- START_TABS-->
+        <ul class="app__tab d-flex">
+          <li class="app__tab__item has-text-centered col-3 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-world"></span>Notificaciones Web</li>
+          <li class="app__tab__item has-text-centered col-3 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-chat"></span>Notificaciones Push</li>
+          <li class="app__tab__item has-text-centered col-3 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-main-open"></span>Notificaciones Mail</li>
+          <li class="app__tab__item has-text-centered col-3 py-3 px-2 is-size-6 has-text-weight-bold is-active"><span class="icon icon-history"></span>Historial</li>
+        </ul>
+        <!-- END_TABS-->
+      </div>
+      <section class="overflow-hidden pt-1">
+        <div class="d-flex h-100">
+          <!-- START_PASOS-->
+          <!--
+          CLASS .app__step
+          VARIANT 
+          .is-prev    :   Paso anterior por defecto tiene fondo gris 
+                          pero se pueden usar con las clases de bulma en 
+                          https://bulma.io/documentation/modifiers/color-helpers/#background-color
+          
+          .is-current :   Paso Actual por defecto tiene el color verde claro 
+                          pero igual se pueden usar las clases de bulma 
+                          https://bulma.io/documentation/modifiers/color-helpers/#background-color
+          
+          .is-next    :   Paso Siguiente
+          
+          -->
+          <div class="col-3 h-100 overflow-auto py-3 px-4 app__step is-current">
+            <div class="w-90 mx-auto d-flex flex-column h-100">
+              <div class="mt-auto">
+                <div class="py-4">
+                  <h4 class="has-text-centered is-size-5 has-text-weight-bold">Filtrado</h4>
+                </div>
+                <div class="py-3">
+                  <h4 class="has-text-centered has-text-weight-bold">Tipo de producto</h4>
+                  <div>
+                    <select class="app__form__control w-100 is-lite has-text-centered" id="filterByProduct" name="filterByProduct" placeholder="Seleccione una opción" style="text-align-last: center;">
+                      <option disabled="disabled" selected="selected">Seleccione una opción</option>
+                      <option value="Cuenta Inversión">Cuenta Inversión 1</option>
+                      <option value="Cuenta Inversión">Cuenta Inversión 2</option>
+                      <option value="Cuenta Inversión">Cuenta Inversión 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="py-3">
+                  <h4 class="has-text-centered has-text-weight-bold">Fecha</h4>
+                  <div class="d-flex mx-n3">
+                    <div class="col-4 px-3">
+                      <input class="app__form__control is-lite has-text-centered w-100" id="day" name="day" placeholder="Día"/>
+                    </div>
+                    <div class="col-4 px-3">
+                      <input class="app__form__control is-lite has-text-centered w-100" id="month" name="month" placeholder="Mes"/>
+                    </div>
+                    <div class="col-4 px-3">
+                      <input class="app__form__control is-lite has-text-centered w-100" id="year" name="year" placeholder="Año"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="py-3 mt-auto">
+                    <button class="app__btn is-primary w-100"><span>Buscar</span>
+                    </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 h-100 overflow-auto py-3 px-4 app__step is-next has-background-white">
+            <div class="w-90 mx-auto">
+              <div class="py-3">
+                <p class="has-text-centered has-text-weight-bold">Listado de clientes</p>
+                <table class="app__table is-empty has-broder-radius w-100">
+                  <thead>
+                    <tr>
+                      <th style="width: 25px">
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </th>
+                      <th align="center">Nombre</th>
+                      <th align="center">Nombre de usuario</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="width: 25px"> 
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 25px"> 
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 25px"> 
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 25px"> 
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 25px"> 
+                        <label class="app__checkbox">
+                          <input type="checkbox" disabled="disabled"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="py-3">
+                <div class="d-flex justify-content-center">
+                  <div class="col-12 col-md-8 col-lg-5 col-xl-4">
+                    <div class="px-1">
+                          <button class="app__btn is-light has-icon-big w-100"><span class="icon icon-excel"></span><span>Exportar a Excel</span>
+                          </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="py-3">
+                <p class="has-text-centered">Listado de clientes</p>
+                <table class="app__table has-broder-radius w-100">
+                  <thead>
+                    <tr>
+                      <th style="width: 25px">
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </th>
+                      <th align="center">Nombre</th>
+                      <th align="center">Nombre de usuario</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> 
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td> Alberto Antonio Cuestas Menjívar</td>
+                      <td align="center"> AanCe2341</td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td> Alberto Antonio Cuestas Menjívar</td>
+                      <td align="center"> AanCe2341</td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td> Alberto Antonio Cuestas Menjívar</td>
+                      <td align="center"> AanCe2341</td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td> Alberto Antonio Cuestas Menjívar</td>
+                      <td align="center"> AanCe2341</td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <label class="app__checkbox">
+                          <input type="checkbox"/><span class="app__checkbox__input"></span>
+                        </label>
+                      </td>
+                      <td> Alberto Antonio Cuestas Menjívar</td>
+                      <td align="center"> AanCe2341</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="py-3">
+                <div class="d-flex justify-content-center">
+                  <div class="col-12 col-md-8 col-lg-5 col-xl-4">
+                    <div class="px-1">
+                          <button class="app__btn is-primary has-icon-big w-100"><span class="icon icon-excel has-text-warning"></span><span>Exportar a Excel</span>
+                          </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

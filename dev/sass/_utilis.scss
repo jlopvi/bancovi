@@ -212,7 +212,7 @@
   .w-90 {
     width: 90% !important;
   }
-  
+
   .w-100 {
     width: 100% !important;
   }
@@ -3632,3 +3632,12 @@
     }
   }
   /*# sourceMappingURL=bootstrap-utilities.css.map */
+
+@for $i from 100 through 1000 {
+  .mh-p-#{$i} {
+    max-height:  $i + px
+  }
+  .h-p-#{$i} {
+    max-height:  $i + px
+  }
+}

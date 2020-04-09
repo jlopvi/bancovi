@@ -9,6 +9,7 @@ html,
 body{
     font-family: 'Montserrat', sans-serif; 
     color: #5B5B5B;
+    overflow-y: auto;
 }
 
 .app{
@@ -70,7 +71,6 @@ body{
                 color: #fff;
             }
             td{
-                border: 2px solid #fff;
                 background-color:#F2F2F2;
             }
         }
@@ -203,7 +203,7 @@ select{
         &__control{
             background-color: $primary-lo;
             color: $primary;
-            padding: 0.5em 1em;
+            padding: 0.5em 0.7em;
             border: 1px solid $primary;
             border-radius: 0.55em;
             outline: none !important;
@@ -282,6 +282,13 @@ select{
                 color: $disabled;
                 box-shadow: none;
                 border: 1px solid $disabled;
+                
+            }
+            &-light{
+                background-color: $light;
+                border: 0 none;
+                box-shadow: none;
+                color: $disabled;
             }
             &-small{
                 padding: 0.25em 0.5em;
@@ -354,3 +361,11 @@ select{
     }
 }
 
+
+.mh{
+    &-p{
+        &-500{
+            max-height: 500px;
+        }
+    }
+}
