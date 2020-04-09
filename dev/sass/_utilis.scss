@@ -3633,11 +3633,16 @@
   }
   /*# sourceMappingURL=bootstrap-utilities.css.map */
 
-@for $i from 100 through 1000 {
+@for $i from 10 through 1000 {
   .mh-p-#{$i} {
     max-height:  $i + px
   }
   .h-p-#{$i} {
     max-height:  $i + px
+  }
+}
+@for $i from 1 through 1000 {
+  .index-#{$i} {
+    z-index:  $i;
   }
 }

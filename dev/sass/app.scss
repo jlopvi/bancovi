@@ -13,6 +13,49 @@ body{
 }
 
 .app{
+    &__dropdown{
+        position: relative;
+        &__content{
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            list-style: none;
+            padding: 0.25em 0;
+            top: 100%;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0.55rem;
+            border-bottom-left-radius: 0.55rem;
+            box-shadow: 2px 2px 5px rgba(#000, 0.1);
+            overflow: auto;
+            transform: translateY(20%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.3s;
+            &.is-open{
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            &__item{
+                display: block;
+                text-align: left;
+                font-weight: 400;
+                color: $primary;
+            }
+            &__link{
+                padding: 1em;
+                display: block;
+                color: $primary;
+                transition: background-color 0.3s;
+                &:hover{
+                    background-color: $primary-lo;
+                    color: $primary;
+                }
+            }
+
+        }
+    }
     &__table{
         border-spacing: 3px;
         border-collapse: separate;
@@ -32,6 +75,7 @@ body{
                 td{
                     padding: 0.5em;
                     background-color:#F2F2F2;
+                    vertical-align: middle;
                 }
             }
         }
@@ -119,6 +163,26 @@ body{
                 border-left: 0;
             }
             
+        }
+        &__menu{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            .icon-when-close{
+                display: inline-block;
+            }
+            .icon-when-open{
+                display: none;
+            }
+            &.is-open{
+                .icon-when-open{
+                    display: inline-block;
+                }
+                .icon-when-close{
+                    display: none;
+                }
+            }
         }
     }
     &__controls{
@@ -268,6 +332,13 @@ select{
             }
         }
         &.is{
+            &-transparent{
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0.5em;
+                border: 0 none;
+            }
             &-primary{
                 background-color: $primary;
                 color: #fff;
@@ -362,10 +433,10 @@ select{
 }
 
 
-.mh{
-    &-p{
-        &-500{
-            max-height: 500px;
+.has{
+    &-text{
+        &-nowrap{
+            white-space: nowrap;
         }
     }
 }

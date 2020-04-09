@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mentenimento General Agencias
+        link(rel="stylesheet", href="/css/bancoviIcons.css")
+        link(rel="stylesheet", href="/css/app.css")
+    body
+        include mixin/button.pug
+        .app__section.container-fluid.overflow-hidden
+            div
+                - var title = "Mantenimiento"
+                - var icon = "icon-tools"
+                include includes/sectionHeader.pug
+                // START_TABS
+                ul.app__tab.d-flex.position-ralative.index-100
+                    li.position-relative.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold.is-active
+                        span.icon.icon-boxtools
+                        span General
+                        .app__tab__menu
+                            button.app__btn.has-text-white.is-transparent
+                                span.icon.icon-menu-small.icon-when-close
+                                span.icon.icon-close.icon-when-open
+                        ul.app__dropdown__content.w-100.index-100.mh-p-500
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Parámetros Generales
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Agencias
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Productos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Créditos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Chequera
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Frecuencia de pagos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Imágenes de token
+                            
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-screen
+                        | B@ncovinet
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-cellphone
+                        | App Móvil
+                // END_TABS
+            section.overflow-hidden.pt-1
+                .h-100.overflow-auto
+                    .container
+                        div.py-3
+                            h2.is-size-5.has-text-centered.has-text-weight-bold.is-uppercase Agencias
+                        .has-text-centered.pb-3
+                            +button('Agregar nueva Agencia', 'icon-add', 'is-primary has-icon-big mx-auto')
+                        .pb-3
+                            table.app__table.has-broder-radius.w-100.has-text-primary
+                                thead
+                                    tr
+                                        th(align="center") #
+                                        th(align="center") Código de Agencia
+                                        th(align="center") Nombre de la Agencia
+                                        th(align="center") Dirección
+                                        th(align="center") Teléfono
+                                        th(align="center") Estado
+                                        th(align="center") Imagen
+                                        th(align="center") Acciones
+                                tbody
+                                    - for(i = 0; i < 50; i++) {
+
+                                        tr
+                                            td(align="center") 1
+                                            td(align="center") 001
+                                            td(align="center") Agencia Metrocentro San Salvador
+                                            td(align="center") C.C. Metrocentro, 11ª. Etapa, Local #8, San Salvador.
+                                            td.has-text-nowrap(align="center") +(503) 2505-4755
+                                            td(align="center") Activo
+                                            td(align="center")
+                                                img.h-p-50(src="./img/Agencia_bancovi_Santa_Ana_768px.png")
+                                            td(align="center")
+                                                .d-flex
+                                                    +button('', 'icon-edit mx-0 is-size-3', 'is-transparent')
+                                                    +button('', 'icon-bin mx-0 is-size-3', 'is-transparent')
+                                    - }
