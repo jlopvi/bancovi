@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mentenimento General Agencias</title>
+    <link rel="stylesheet" href="/css/bancoviIcons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+  </head>
+  <body>
+    <div class="app__section container-fluid overflow-hidden">
+      <div>
+        <div class="app__section__header">
+          <h6 class="section__header__title has-text-centered has-text-primary is-uppercase has-text-weight-bold"><span class="icon icon-tools"></span>Mantenimiento</h6>
+        </div>
+        <!-- START_TABS-->
+        <ul class="app__tab d-flex position-ralative index-100">
+          <li class="position-relative app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold is-active"><span class="icon icon-boxtools"></span><span>General</span>
+            <div class="app__tab__menu">
+              <button class="app__btn has-text-white is-transparent"><span class="icon icon-menu-small icon-when-close"></span><span class="icon icon-close icon-when-open"></span></button>
+            </div>
+            <ul class="app__dropdown__content w-100 index-100 mh-p-500">
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Parámetros Generales</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Agencias</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Productos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Créditos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Chequera</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Frecuencia de pagos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Imágenes de token</a></li>
+            </ul>
+          </li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-screen"></span>B@ncovinet</li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-cellphone"></span>App Móvil</li>
+        </ul>
+        <!-- END_TABS-->
+      </div>
+      <section class="overflow-hidden pt-1">
+        <div class="h-100 overflow-auto px-3">
+          <div class="py-3">
+            <h2 class="is-size-5 has-text-centered has-text-weight-bold is-uppercase">EDITAR Agencia</h2>
+          </div>
+          <div class="app__jumbotron mb-3">
+            <div class="app__jumbotron__header">
+              <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Info General</h3>
+            </div>
+            <div class="app__jumbotron__body">
+              <div class="d-flex flex-wrap">
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Código de la Agencia:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-3 p-3">
+                  <label><span class="has-text-centered d-block">Nombre de la Agencia:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-3 p-3">
+                  <label><span class="has-text-centered d-block">Dirección:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Teléfono:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Estado de la Agencia:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-12 p-3">
+                  <label><span class="has-text-centered d-block">URL de imagen de Agencia:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app__jumbotron mb-3"> 
+            <div class="app__jumbotron__header">
+              <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Coordenadas</h3>
+            </div>
+            <div class="app__jumbotron__body">
+              <div class="d-flex justify-content-center">
+                <div class="col-6 col-md-5 col-lg-3 col-xl-auto p-3">
+                  <label><span class="has-text-centered d-block">Latitud de la Agencia: </span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-6 col-md-5 col-lg-3 col-xl-auto p-3">
+                  <label><span class="has-text-centered d-block">Altitud de la Agencia: </span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="col-12 col-md-9 col-lg-8 p-3">
+                  <div class="w-100 h-p-500 has-background-white has-border-primary rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app__jumbotron"> 
+            <div class="app__jumbotron__header">
+              <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Horarios</h3>
+            </div>
+            <div class="app__jumbotron__body">
+              <div class="d-flex justify-content-center py-3">
+                <div class="col-6">
+                  <h4 class="has-text-centered is-size-6 has-text-weight-bold">Apertura</h4>
+                </div>
+                <div class="col-6">
+                  <h4 class="has-text-centered is-size-6 has-text-weight-bold">Cierre</h4>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="col-6 pt-3 px-3">
+                  <div class="pt-0">
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Lunes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-0" id="am-0" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-0" id="pm-0" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-0"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-0"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Martes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-1" id="am-1" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-1" id="pm-1" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-1"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-1"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Miercoles:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-2" id="am-2" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-2" id="pm-2" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-2"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-2"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Jueves:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-3" id="am-3" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-3" id="pm-3" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-3"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-3"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Viernes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-4" id="am-4" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-4" id="pm-4" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-4"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-4"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Sabado:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-5" id="am-5" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-5" id="pm-5" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-5"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-5"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Domingo:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-6" id="am-6" value="am" checked="checked" disabled="disabled"/>
+                              <input type="radio" name="tipoHorario-6" id="pm-6" value="pm" disabled="disabled"/>
+                              <label class="app__switch__btn" for="am-6"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-6"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 pt-3 px-3 has-border-left-primary">
+                  <div class="pt-3">
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Lunes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-0" id="am-c-0" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-0" id="pm-c-0" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-0"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-0"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Martes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-1" id="am-c-1" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-1" id="pm-c-1" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-1"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-1"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Miercoles:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-2" id="am-c-2" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-2" id="pm-c-2" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-2"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-2"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Jueves:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-3" id="am-c-3" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-3" id="pm-c-3" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-3"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-3"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Viernes:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-4" id="am-c-4" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-4" id="pm-c-4" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-4"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-4"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Sabado:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-5" id="am-c-5" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-5" id="pm-c-5" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-5"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-5"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mx-n2 py-1 align-items-center justify-content-center">
+                      <div class="col-2 px-2">
+                        <p class="has-text-right is-size-6 has-text-weight-bold">Domingo:</p>
+                      </div>
+                      <div class="col-auto px-2">
+                        <div class="d-flex align-items-center">
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Hora</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="12" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2">
+                            <label class="d-block"><span>Minutos</span>
+                              <input class="app__form__control is-lite has-border-primary w-p-70" type="number" min="0" max="60" value="00"/>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <label class="app__checkbox h-p-20 d-flex align-items-center"><span class="mr-2">N/A</span>
+                              <input type="checkbox"/><span class="app__checkbox__input">    </span>
+                            </label>
+                          </div>
+                          <div class="col-auto px-2 h-p-20">
+                            <div class="app__switch">
+                              <input type="radio" name="tipoHorario-c-6" id="am-c-6" value="am" checked="checked"/>
+                              <input type="radio" name="tipoHorario-c-6" id="pm-c-6" value="pm"/>
+                              <label class="app__switch__btn" for="am-c-6"> <span class="app__switch__btn__text">AM</span></label>
+                              <label class="app__switch__btn" for="pm-c-6"><span class="app__switch__btn__text">PM</span></label><span class="app__switch__indicator"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-3 d-flex justify-content-center"> 
+                <button class="app__btn is-primary mx-3"><span>Cancelar</span>
+                </button>
+                <button class="app__btn mx-3"><span>Guardar</span>
+                </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1199,7 +1199,7 @@
   }
   
   .rounded {
-    border-radius: 0.25rem !important;
+    border-radius: 0.55rem !important;
   }
   
   .rounded-sm {
@@ -3638,7 +3638,13 @@
     max-height:  $i + px
   }
   .h-p-#{$i} {
-    max-height:  $i + px
+    height:  $i + px
+  }
+  .mw-p-#{$i} {
+    max-width:  $i + px
+  }
+  .w-p-#{$i} {
+    width:  $i + px
   }
 }
 @for $i from 1 through 1000 {

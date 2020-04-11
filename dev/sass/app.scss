@@ -13,6 +13,126 @@ body{
 }
 
 .app{
+    &__switch{
+        input{
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+            &:checked{
+                & ~ .app__switch__indicator{
+                    opacity: 1;
+                }
+            }
+            &:first-of-type{
+                &:checked{
+                    & ~ .app__switch__btn{
+                            &:first-of-type{
+                                width: 0;
+                            }
+                    }
+                    & ~ .app__switch__indicator{
+                        left: 0;
+                    }
+                }
+            }
+            &:last-of-type{
+                &:checked{
+                    & ~ .app__switch__btn{
+                        &:last-of-type{
+                            width: 0;
+                        }
+                    }
+                    
+                    & ~ .app__switch__indicator{
+                        left: 25px;
+                    }
+                }
+            }
+            &:disabled{
+                & ~ .app__switch__indicator{
+                    background-color: $disabled;
+                }
+                & ~ .app__switch__btn{
+                    box-shadow: inset 0 0 0 1px $disabled;
+                }
+            }
+        }
+        cursor: pointer;
+        user-select: none;
+        border-radius: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        line-height: 25px;
+        
+        line-height: 23px;
+        position: relative;
+        &__btn{
+            display: inline-block;
+            width: 25px;
+            height: 23px;
+            font-size: 0.7em;
+            text-align: center;
+            line-height: 23px;
+            width: 50px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 1px $primary;
+            border-radius: 25px;
+            background-color: #fff;
+            &:first-of-type{
+                .app__switch__btn__text{
+                    left: 0;
+                }
+                
+            }
+            &:last-of-type{
+                .app__switch__btn__text{
+                    right: 0;
+                }
+            }
+            &__text{
+                position: absolute;
+                pointer-events: none;
+                width: 25px;
+                height: 25px;
+                top: 0;
+                color: #fff;
+                z-index: 6;
+                font-weight: 700;
+            }
+        }
+        &__indicator{
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            opacity: 0;
+            position: absolute;
+            background-color: $primary;
+            top: 0;
+            display: inline-block;
+            z-index: 0;
+            pointer-events: none;
+            transition: left 0.2s ease-in-out, width 0.3s;
+        }
+    }
+    &__jumbotron{
+        &__header{
+            padding: 0.5em 1em;
+            font-size: 1.2rem;
+            background-color: $primary;
+            color: #fff;
+            border-radius: 0.5em 0.5em 0 0;
+            border: 1px solid $primary;
+        }
+        &__body{
+            background-color: $primary-lo;
+            color: $primary;
+            padding: 1em;
+            border: 1px solid $primary;
+            border-radius: 0 0 0.5em 0.5em;
+        }
+        
+    }
     &__dropdown{
         position: relative;
         &__content{
@@ -118,6 +238,22 @@ body{
                 background-color:#F2F2F2;
             }
         }
+        &.is-bicolor{
+            tbody{
+                tr{
+                    &:nth-child(odd) {
+                        td{
+                            background-color: #F2F2F2;
+                        }
+                    }
+                    &:nth-child(even) {
+                        td{
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
     }
     &__section{
         height: 100vh;
@@ -126,6 +262,10 @@ body{
         grid-template-columns: 1fr;
         &__header{
             padding: 0.75rem 1rem;
+            &.is-primary{
+                background-color: $primary;
+                color: #fff;
+            }
             &__title{
                 font-size: 1.2em;
                 .icon{
@@ -258,6 +398,9 @@ select{
                 &:focus{
                     border-radius: 0.55em 0.55em 0 0;
                 }
+                &::before{
+                    content: 'ddadadasd';
+                }
             }
         }
     }
@@ -369,6 +512,7 @@ select{
     }
     &__checkbox{
         display: inline-block;
+        position: relative;
         &__input{
             display: inline-block;
             width: 20px;
@@ -402,7 +546,9 @@ select{
         }
         input[type="checkbox"],
         input[type="radio"] {
-            display: none;
+            opacity: 0;
+            z-index: -1;
+            position: absolute;
             &:checked{
                 & + .app__checkbox__input{
                     
@@ -437,6 +583,20 @@ select{
     &-text{
         &-nowrap{
             white-space: nowrap;
+        }
+    }
+}
+
+.has{
+    &-border{
+        &-primary{
+            border: 1px solid $primary;
+        }
+        &-left{
+            border-left: 1px solid $disabled;
+            &-primary{
+                border-left: 1px solid $primary;
+            }
         }
     }
 }
