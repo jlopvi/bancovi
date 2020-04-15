@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mentenimento CrÉditos</title>
+    <link rel="stylesheet" href="/css/bancoviIcons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+  </head>
+  <body>
+    <div class="app__section container-fluid overflow-hidden">
+      <div>
+        <div class="app__section__header">
+          <h6 class="section__header__title has-text-centered has-text-primary is-uppercase has-text-weight-bold"><span class="icon icon-tools"></span>Mantenimiento</h6>
+        </div>
+        <!-- START_TABS-->
+        <ul class="app__tab d-flex position-ralative index-100">
+          <li class="position-relative app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold is-active"><span class="icon icon-boxtools"></span><span>General</span>
+            <div class="app__tab__menu">
+              <button class="app__btn has-text-white is-transparent"><span class="icon icon-menu-small icon-when-close"></span><span class="icon icon-close icon-when-open"></span></button>
+            </div>
+            <ul class="app__dropdown__content w-100 index-100 mh-p-500">
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Parámetros Generales</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Agencias</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Productos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Créditos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Chequera</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Frecuencia de pagos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Imágenes de token</a></li>
+            </ul>
+          </li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-screen"></span>B@ncovinet</li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-cellphone"></span>App Móvil</li>
+        </ul>
+        <!-- END_TABS-->
+      </div>
+      <section class="overflow-hidden pt-1">
+        <div class="h-100 overflow-auto px-3">
+          <div class="py-3">
+            <h2 class="is-size-5 has-text-centered has-text-weight-bold is-uppercase">chequera</h2>
+          </div>
+          <div class="app__jumbotron mb-3 w-90 mx-auto">
+            <div class="app__jumbotron__header">
+              <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Crear nuevo tipo de chequera</h3>
+            </div>
+            <div class="app__jumbotron__body">
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Orden del registro:  </span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Código:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-6 p-3">
+                  <label><span class="has-text-centered d-block">Nombre de chequera:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Estado:</span>
+                    <select class="app__form__control is-lite has-border-primary w-100">
+                      <option value="1">Activo</option>
+                      <option value="1">Bloqueado</option>
+                      <option value="1">Cancelado</option>
+                      <option value="1">Eliminado</option>
+                      <option value="1">Deshabilitado</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="col-2 mx-auto">
+                    <button class="app__btn is-primary w-100"><span>Crear</span>
+                    </button>
+              </div>
+            </div>
+          </div>
+          <div class="has-text-centered mb-3">
+            <h2 class="is-size-5 has-text-centered has-text-weight-bold has-text-primary">Chequeras creadas</h2>
+          </div>
+          <div class="w-90 mx-auto mb-5">
+            <table class="app__table is-primary w-100 has-border-radius">
+              <thead>
+                <tr>
+                  <th align="center">Orden del registro</th>
+                  <th align="center">Código</th>
+                  <th align="center">Nombre de chequera</th>
+                  <th align="center">Estado</th>
+                  <th align="center">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">001</td>
+                  <td align="center">Chequera  Taco</td>
+                  <td align="center">Activa</td>
+                  <td align="center"> 
+                    <div class="d-flex justify-content-center">
+                          <button class="app__btn is-transparent"><span class="icon icon-edit mx-0 is-size-3"></span><span></span>
+                          </button>
+                          <button class="app__btn is-transparent"><span class="icon icon-bin mx-0 is-size-3"></span><span></span>
+                          </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="app__table__row__edit">
+                  <td align="center"> 
+                    <input class="app__table__from__control w-100 h-100 has-text-centered" type="text" value="2"/>
+                  </td>
+                  <td align="center"> 
+                    <input class="app__table__from__control w-100 h-100 has-text-centered" type="text" value="002"/>
+                  </td>
+                  <td align="center"> 
+                    <input class="app__table__from__control w-100 h-100 has-text-centered" type="text" value="Chequera  Voucher"/>
+                  </td>
+                  <td align="center"> 
+                    <select class="app__table__from__control">
+                      <option value="1">Activo</option>
+                      <option value="2" selected="selected">Bloqueado</option>
+                      <option value="3">Cancelado</option>
+                      <option value="4">Eliminado</option>
+                      <option value="5">Deshabilitado</option>
+                    </select>
+                  </td>
+                  <td align="center"> 
+                    <div class="d-flex justify-content-center">
+                          <button class="app__btn is-transparent"><span class="icon icon-save mx-0 is-size-3"></span><span></span>
+                          </button>
+                          <button class="app__btn is-transparent"><span class="icon icon-bin mx-0 is-size-3"></span><span></span>
+                          </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="app__jumbotron mb-3 w-90 mx-auto">
+            <div class="app__jumbotron__header">
+              <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Nuevo costo por chequera</h3>
+            </div>
+            <div class="app__jumbotron__body">
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Código:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Tipo de chequera:</span>
+                    <select class="app__form__control is-lite has-border-primary w-100">
+                      <option value="1">Activo</option>
+                      <option value="1">Bloqueado</option>
+                      <option value="1">Cancelado</option>
+                      <option value="1">Eliminado</option>
+                      <option value="1">Deshabilitado</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Cantidad de cheques:</span>
+                    <select class="app__form__control is-lite has-border-primary w-100">
+                      <option value="1">Activo</option>
+                      <option value="1">Bloqueado</option>
+                      <option value="1">Cancelado</option>
+                      <option value="1">Eliminado</option>
+                      <option value="1">Deshabilitado</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-1 p-3">
+                  <label><span class="has-text-centered d-block">Precio:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-1 p-3">
+                  <label><span class="has-text-centered d-block">IVA:</span>
+                    <input class="app__form__control is-lite has-border-primary w-100"/>
+                  </label>
+                </div>
+                <div class="col-2 p-3">
+                  <label><span class="has-text-centered d-block">Estado:</span>
+                    <select class="app__form__control is-lite has-border-primary w-100">
+                      <option value="1">Activo</option>
+                      <option value="1">Bloqueado</option>
+                      <option value="1">Cancelado</option>
+                      <option value="1">Eliminado</option>
+                      <option value="1">Deshabilitado </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-2 p-3 has-text-centered"><span>Precio por chequera completa:</span>
+                  <div class="app__switch mx-auto">
+                    <input class="is-dark" type="radio" name="chequera" id="no" value="no"/>
+                    <input type="radio" name="chequera" id="si" value="si" checked="checked"/>
+                    <label class="app__switch__btn" for="no"> <span class="app__switch__btn__text">No</span></label>
+                    <label class="app__switch__btn" for="si"><span class="app__switch__btn__text">Si</span></label><span class="app__switch__indicator"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 mx-auto">
+                    <button class="app__btn is-primary w-100"><span>Crear</span>
+                    </button>
+              </div>
+            </div>
+          </div>
+          <div class="has-text-centered mb-3">
+            <h2 class="is-size-5 has-text-centered has-text-weight-bold has-text-primary">Costos establecidos</h2>
+          </div>
+          <div class="w-90 mx-auto mb-5">
+            <table class="app__table is-primary w-100 has-border-radius">
+              <thead>
+                <tr>
+                  <th align="center">Código</th>
+                  <th align="center">Tipo de chequera</th>
+                  <th align="center">Cantidad de cheques</th>
+                  <th align="center">Precio</th>
+                  <th align="center">IVA</th>
+                  <th align="center">Estado</th>
+                  <th align="center">Precio por chequera completa</th>
+                  <th align="center">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">Taco</td>
+                  <td align="center">25</td>
+                  <td align="center">$2.50</td>
+                  <td align="center">13%</td>
+                  <td align="center">Activo</td>
+                  <td align="center">Si</td>
+                  <td align="center"> 
+                    <div class="d-flex justify-content-center">
+                          <button class="app__btn is-transparent"><span class="icon icon-edit mx-0 is-size-3"></span><span></span>
+                          </button>
+                          <button class="app__btn is-transparent"><span class="icon icon-bin mx-0 is-size-3"></span><span></span>
+                          </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
