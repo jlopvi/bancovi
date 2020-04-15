@@ -125,7 +125,7 @@
           </div>
           <div class="app__dropdown__special" id="dropdown-2">
             <div class="has-text-centered">
-              <div class="app__dropdown__special__header is-size-5 has-text-weight-bold" data-toggle-class="#dropdown-2/is-open"> <span>Crédito Vivienda</span></div>
+              <div class="app__dropdown__special__header is-size-5 has-text-weight-bold" data-toggle-class="#dropdown-2 , .clas2 / is-open | #id / clase"> <span>Crédito Vivienda</span></div>
             </div>
             <div class="app__dropdown__special__body">
               <div class="d-flex flex-wrap justify-content-center">
@@ -180,28 +180,36 @@
       </section>
     </div>
     <script>
-      let $dropdowns = document.querySelectorAll("[data-toggle-class]")
+      let $toggleClass = document.querySelectorAll("[data-toggle-class]")
+      let $addClass = document.querySelectorAll("[data-add-class]")
+      let $removeClass = document.querySelectorAll("[data-add-class]")
       
-      $dropdowns.forEach($item => {
-          $item.addEventListener('click', () => {
-              let data = $item.getAttribute('data-toggle-class').split('|')
+      assingDataEventsClass($toggleClass, 'click', 'toggle')
+      assingDataEventsClass($addClass, 'click', 'add')
+      assingDataEventsClass($removeClass, 'click', 'remove')
       
-              data.forEach(group => {
-                  let data = group.split('/')
-      
-                  let elements = data[0].split(',')
-                  let classList = data[1].split(',')
-      
-                  elements.forEach(el => {
-                      let $el = document.querySelector(el)
-                      classList.forEach(classItem => {
-                          $el.classList.toggle(classItem)
-                      })
+      function assingDataEventsClass($elements, type, action) {
+          $elements.forEach($item => {
+              $item.addEventListener(type, () => {
+                  let data = $item.dataset.toggleClass.replace(/\s/g,'').split('|')
+                  data.forEach(group => {
+                      let data = group.split('/')
+                      let elements = data[0].split(',')
+                      let classList = data[1].split(',')
+                      if(elements.length && classList.length) {
+                          elements.forEach(el => {
+                              let $el = document.querySelector(el)
+                              if($el) {
+                                  classList.forEach(classItem => {
+                                      $el.classList[action](classItem)
+                                  })
+                              }
+                          })
+                      }
                   })
               })
           })
-         
-      })
+      }
     </script>
   </body>
 </html>

@@ -115,7 +115,7 @@ html(lang="es")
                                     +button("Guardar", "", "is-primary")
                     .app__dropdown__special#dropdown-2
                         .has-text-centered
-                            .app__dropdown__special__header.is-size-5.has-text-weight-bold(data-toggle-class="#dropdown-2/is-open") 
+                            .app__dropdown__special__header.is-size-5.has-text-weight-bold(data-toggle-class="#dropdown-2 , .clas2 / is-open | #id / clase") 
                                 span Crédito Vivienda
                         .app__dropdown__special__body
                             .d-flex.flex-wrap.justify-content-center
@@ -157,25 +157,33 @@ html(lang="es")
         script.
 
 
-            let $dropdowns = document.querySelectorAll("[data-toggle-class]")
+            let $toggleClass = document.querySelectorAll("[data-toggle-class]")
+            let $addClass = document.querySelectorAll("[data-add-class]")
+            let $removeClass = document.querySelectorAll("[data-add-class]")
 
-            $dropdowns.forEach($item => {
-                $item.addEventListener('click', () => {
-                    let data = $item.getAttribute('data-toggle-class').split('|')
+            assingDataEventsClass($toggleClass, 'click', 'toggle')
+            assingDataEventsClass($addClass, 'click', 'add')
+            assingDataEventsClass($removeClass, 'click', 'remove')
 
-                    data.forEach(group => {
-                        let data = group.split('/')
-
-                        let elements = data[0].split(',')
-                        let classList = data[1].split(',')
-
-                        elements.forEach(el => {
-                            let $el = document.querySelector(el)
-                            classList.forEach(classItem => {
-                                $el.classList.toggle(classItem)
-                            })
+            function assingDataEventsClass($elements, type, action) {
+                $elements.forEach($item => {
+                    $item.addEventListener(type, () => {
+                        let data = $item.dataset.toggleClass.replace(/\s/g,'').split('|')
+                        data.forEach(group => {
+                            let data = group.split('/')
+                            let elements = data[0].split(',')
+                            let classList = data[1].split(',')
+                            if(elements.length && classList.length) {
+                                elements.forEach(el => {
+                                    let $el = document.querySelector(el)
+                                    if($el) {
+                                        classList.forEach(classItem => {
+                                            $el.classList[action](classItem)
+                                        })
+                                    }
+                                })
+                            }
                         })
                     })
                 })
-               
-            })
+            }
