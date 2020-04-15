@@ -13,6 +13,66 @@ body{
 }
 
 .app{
+    &__dropdown{
+        &__special{
+            padding-bottom: 1.5em;
+            &__header{
+                background-color: $primary;
+                color: #fff;
+                display: inline-block;
+                min-width: 30%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                padding: 0.5em 1em;
+                border-radius: 0.5em;
+                cursor: pointer;
+                user-select: none;
+                position: relative;
+                z-index: 2;
+                span{
+                    display: inline-block;
+                    &::before{
+                        content: '+';
+                        font-size: 1.2em;
+                        display: inline-block;
+                        margin-right: 0.25em;
+                    }
+                }
+            }
+            &__body{
+                color: $primary;
+                background-color: $primary-lo;
+                border-radius: 0.5em;
+                margin-top: -1.5em;
+                margin-bottom: 1.5em;
+                height: 0;
+                overflow: hidden;
+                padding-top: 0;
+                border: 0 none;
+                opacity: 0;
+                position: relative;
+                z-index: 1;
+                transition: all 0.3s;
+
+            }
+            &.is-open{
+                .app__dropdown__special__header{
+                    span{
+                        &::before{
+                            content: '-';
+                        }
+                    }
+                }
+                .app__dropdown__special__body{
+                    height: auto;
+                    opacity: 1;
+                    border: 1px solid $primary;
+                    padding-top: 1.5em;
+                }
+            }
+        }
+    }
     &__switch{
         input{
             opacity: 0;
