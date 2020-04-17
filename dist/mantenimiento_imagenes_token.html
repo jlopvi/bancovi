@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mentenimento CrÉditos</title>
+    <link rel="stylesheet" href="/css/bancoviIcons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+  </head>
+  <body>
+    <div class="app__section container-fluid overflow-hidden">
+      <div>
+        <div class="app__section__header">
+          <h6 class="section__header__title has-text-centered has-text-primary is-uppercase has-text-weight-bold"><span class="icon icon-tools"></span>Mantenimiento</h6>
+        </div>
+        <!-- START_TABS-->
+        <ul class="app__tab d-flex position-ralative index-100">
+          <li class="position-relative app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold is-active"><span class="icon icon-boxtools"></span><span>General</span>
+            <div class="app__tab__menu">
+              <button class="app__btn has-text-white is-transparent"><span class="icon icon-menu-small icon-when-close"></span><span class="icon icon-close icon-when-open"></span></button>
+            </div>
+            <ul class="app__dropdown__content w-100 index-100 mh-p-500">
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Parámetros Generales</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Agencias</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Productos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Créditos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Chequera</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Frecuencia de pagos</a></li>
+              <li class="app__dropdown__content__item"><a class="app__dropdown__content__link px-5" href="#">Imágenes de token</a></li>
+            </ul>
+          </li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-screen"></span>B@ncovinet</li>
+          <li class="app__tab__item has-text-centered col-4 py-3 px-2 is-size-6 has-text-weight-bold"><span class="icon icon-cellphone"></span>App Móvil</li>
+        </ul>
+        <!-- END_TABS-->
+      </div>
+      <section class="overflow-hidden pt-1">
+        <div class="h-100 overflow-auto px-3">
+          <div class="py-3">
+            <h2 class="is-size-5 has-text-centered has-text-weight-bold is-uppercase">imágenes de token</h2>
+          </div>
+          <div class="has-border-primary p-5 rounded w-90 mx-auto mb-4">
+            <div class="app__jumbotron mb-3 w-100 mx-auto">
+              <div class="app__jumbotron__header">
+                <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Agregar nueva imagen</h3>
+              </div>
+              <div class="app__jumbotron__body">
+                <div class="d-flex flex-wrap justify-content-center">
+                  <div class="col-3 p-3">
+                    <label><span class="has-text-centered d-block">Código de imagen: </span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                  <div class="col-3 p-3">
+                    <label><span class="has-text-centered d-block">Categoría:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                  <div class="col-3 p-3">
+                    <label><span class="has-text-centered d-block">Nombre de frecuencia:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                  <div class="col-3 p-3">
+                    <label><span class="has-text-centered d-block">Estado:</span>
+                      <select class="app__form__control is-lite has-border-primary w-100">
+                        <option value="1">Activo</option>
+                        <option value="1">Bloqueado</option>
+                        <option value="1">Cancelado</option>
+                        <option value="1">Eliminado</option>
+                        <option value="1">Deshabilitado</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="col-12 p-3">
+                    <label><span class="has-text-centered d-block">URL de la imagen:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-2 mx-auto">
+                      <button class="app__btn is-primary w-100"><span>Agregar</span>
+                      </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="has-border-primary p-5 rounded w-90 mx-auto my-5">
+            <div class="app__jumbotron mb-3 w-100 mx-auto">
+              <div class="app__jumbotron__header">
+                <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Crear nueva categoría</h3>
+              </div>
+              <div class="app__jumbotron__body">
+                <div class="d-flex flex-wrap justify-content-center">
+                  <div class="col-3 p-3">
+                    <label><span class="has-text-centered d-block">Código de categoría:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                  <div class="col-4 p-3">
+                    <label><span class="has-text-centered d-block">Nombre de la categoría:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                  <div class="col-5 p-3">
+                    <label><span class="has-text-centered d-block">Descripción de la categoría:</span>
+                      <input class="app__form__control is-lite has-border-primary w-100"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-2 mx-auto">
+                      <button class="app__btn is-primary w-100"><span>Crear</span>
+                      </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="has-border-primary rounded p-5 mx-auto w-90 my-5">
+            <div class="has-text-centered mb-3">
+              <h2 class="is-size-5 has-text-centered has-text-weight-bold has-text-primary">Categorías creadas</h2>
+            </div>
+            <div class="w-90 mx-auto mb-5">
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="col-5 p-4">
+                  <div class="app__jumbotron mb-3 w-100 mx-auto">
+                    <div class="app__jumbotron__header">
+                      <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Paisajes</h3>
+                    </div>
+                    <div class="app__jumbotron__body has-background-white px-0 pt-0">
+                      <table class="app__table is-bicolor w-100 is-primary">
+                        <tbody>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="has-text-centered pt-3">
+                            <button class="app__btn is-primary"><span>Eliminar categoría completa</span>
+                            </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5 p-4">
+                  <div class="app__jumbotron mb-3 w-100 mx-auto">
+                    <div class="app__jumbotron__header">
+                      <h3 class="app__jumbotron__header__title has-text-centered has-text-weight-bold">Paisajes</h3>
+                    </div>
+                    <div class="app__jumbotron__body has-background-white px-0 pt-0">
+                      <table class="app__table is-bicolor w-100 is-primary">
+                        <tbody>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                            <td align="center"> 
+                              <div class="d-flex align-item-center justify-content-center align-items-center">
+                                    <button class="app__btn is-transparent mr-1 has-icon-big"><span class="icon icon-bin"></span><span></span>
+                                    </button><span>Antartica.jpg</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="has-text-centered pt-3">
+                            <button class="app__btn is-primary"><span>Eliminar categoría completa</span>
+                            </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

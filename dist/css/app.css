@@ -29883,20 +29883,23 @@ body {
     font-size: 0.9em;
     background-color: #008995;
     color: #fff; }
-  .app__table tbody tr td {
+  .app__table tbody tr.app__table__row__edit td {
+    border: 1px solid #00BBB3;
+    background-color: #CCE7EA; }
+  .app__table tbody tr td,
+  .app__table tbody tr td.no-editable {
     padding: 0.1em 0.5em;
     background-color: #F2F2F2;
-    vertical-align: middle; }
-    .app__table tbody tr td .app__table__from__control {
+    vertical-align: middle;
+    border: 0 none; }
+    .app__table tbody tr td .app__table__from__control,
+    .app__table tbody tr td.no-editable .app__table__from__control {
       border: 0 none;
       background-color: #CCE7EA;
       color: #5B5B5B;
       font-size: 1em;
       display: inline-block;
       outline: none !important; }
-  .app__table tbody tr.app__table__row__edit td {
-    border: 1px solid #00BBB3;
-    background-color: #CCE7EA; }
   .app__table.has-border-radius thead tr:first-child th:first-child {
     border-radius: 0.55em 0 0 0; }
   .app__table.has-border-radius thead tr:first-child th:last-child {

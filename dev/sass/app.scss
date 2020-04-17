@@ -259,10 +259,20 @@ body{
         }
         tbody{
             tr{
-                td{
+                
+                &.app__table__row__edit{
+                    td{
+                        border: 1px solid #00BBB3;
+                        background-color: #CCE7EA;
+                        
+                    }
+                }
+                td,
+                td.no-editable{
                     padding: 0.1em 0.5em;
                     background-color:#F2F2F2;
                     vertical-align: middle;
+                    border: 0 none;
                     .app__table__from__control{
                         border: 0 none;
                         background-color: #CCE7EA;
@@ -270,12 +280,6 @@ body{
                         font-size: 1em;
                         display: inline-block;
                         outline: none !important;
-                    }
-                }
-                &.app__table__row__edit{
-                    td{
-                        border: 1px solid #00BBB3;
-                        background-color: #CCE7EA;
                     }
                 }
             }
