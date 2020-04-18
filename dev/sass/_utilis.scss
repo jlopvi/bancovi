@@ -3652,3 +3652,15 @@
     z-index:  $i;
   }
 }
+
+.has-text{
+  &-nowrap{
+    white-space: nowrap;
+  }
+  &-ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}

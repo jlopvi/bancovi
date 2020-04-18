@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mentenimento CrÉditos
+        link(rel="stylesheet", href="/css/bancoviIcons.css")
+        link(rel="stylesheet", href="/css/app.css")
+    body
+        include mixin/button.pug
+        .app__section.container-fluid.overflow-hidden
+            div
+                - var title = "Mantenimiento"
+                - var icon = "icon-tools"
+                include includes/sectionHeader.pug
+                // START_TABS
+                ul.app__tab.d-flex.position-ralative.index-100
+                    li.position-relative.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold.is-active
+                        span.icon.icon-boxtools
+                        span General
+                        .app__tab__menu
+                            button.app__btn.has-text-white.is-transparent
+                                span.icon.icon-menu-small.icon-when-close
+                                span.icon.icon-close.icon-when-open
+                        ul.app__dropdown__content.w-100.index-100.mh-p-500
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Parámetros Generales
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Agencias
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Productos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Créditos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Chequera
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Frecuencia de pagos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Imágenes de token
+                            
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-screen
+                        | B@ncovinet
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-cellphone
+                        | App Móvil
+                // END_TABS
+            section.overflow-hidden.pt-1
+                .h-100.overflow-auto.px-3
+                    div.py-3
+                        h2.is-size-5.has-text-centered.has-text-weight-bold.is-uppercase ORÍGENES DE LOS FONDOS
+                    div.has-border-primary.rounded.p-5.mb-5.w-90.mx-auto
+                        .app__jumbotron.mb-3.w-100.mx-auto
+                            .app__jumbotron__header
+                                h3.app__jumbotron__header__title.has-text-centered.has-text-weight-bold Crear nueva categoría de origen de los fondos 
+                            .app__jumbotron__body
+                                .d-flex.flex-wrap.justify-content-center
+                                    .col-2.p-3
+                                        label
+                                            span.has-text-centered.d-block Orden:
+                                            input.app__form__control.is-lite.has-border-primary.w-100 
+                                    .col-2.p-3
+                                        label
+                                            span.has-text-centered.d-block Código correlativo: 
+                                            input.app__form__control.is-lite.has-border-primary.w-100 
+                                    .col-5.p-3
+                                        label
+                                            span.has-text-centered.d-block Nombre de categoría:
+                                            input.app__form__control.is-lite.has-border-primary.w-100
+                                    .col-3.p-3
+                                        label
+                                            span.has-text-centered.d-block Estado:
+                                            select.app__form__control.is-lite.has-border-primary.w-100
+                                                option(value="1") Activo
+                                                option(value="1") Bloqueado
+                                                option(value="1") Cancelado
+                                                option(value="1") Eliminado
+                                                option(value="1") Deshabilitado 
+                                    .col-2.mx-auto
+                                        +button("Crear", "", "is-primary w-100")
+
+                        .has-text-centered.mb-3
+                            h2.is-size-5.has-text-centered.has-text-weight-bold.has-text-primary Origen de los fondos creados
+
+                        div.w-100.mx-auto
+                            table.app__table.is-primary.w-100.has-border-radius
+                                thead
+                                    tr
+                                        th(align="center") Orden
+                                        th(align="center") Código correlativo
+                                        th(align="center") Nombre de categoría
+                                        th(align="center") Estado
+                                        th(align="center") Acciones
+                                tbody
+                                    tr
+                                        td(align="center") 1
+                                        td(align="center") 001
+                                        td(align="center") Origen de los fondos
+                                        td(align="center") Activo
+                                        td(align="center") 
+                                            .d-flex.justify-content-center
+                                                +button('', 'icon-edit mx-0 is-size-3', 'is-transparent')
+                                                +button('', 'icon-bin mx-0 is-size-3', 'is-transparent') 

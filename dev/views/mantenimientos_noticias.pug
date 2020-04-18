@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mentenimento CrÉditos
+        link(rel="stylesheet", href="/css/bancoviIcons.css")
+        link(rel="stylesheet", href="//cdn.quilljs.com/1.2.0/quill.snow.css")
+        link(rel="stylesheet", href="//cdn.quilljs.com/1.2.0/quill.bubble.css")
+        link(rel="stylesheet", href="/css/app.css")
+        
+    body(ng-app="quillTest", ng-controller="AppCtrl")
+        include mixin/button.pug
+        .app__section.container-fluid.overflow-hidden
+            div
+                - var title = "Mantenimiento"
+                - var icon = "icon-tools"
+                include includes/sectionHeader.pug
+                // START_TABS
+                ul.app__tab.d-flex.position-ralative.index-100
+                    li.position-relative.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold.is-active
+                        span.icon.icon-boxtools
+                        span General
+                        .app__tab__menu
+                            button.app__btn.has-text-white.is-transparent
+                                span.icon.icon-menu-small.icon-when-close
+                                span.icon.icon-close.icon-when-open
+                        ul.app__dropdown__content.w-100.index-100.mh-p-500
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Parámetros Generales
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Agencias
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Productos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Créditos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Chequera
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Frecuencia de pagos
+                            li.app__dropdown__content__item
+                                a.app__dropdown__content__link.px-5(href="#") Imágenes de token
+                            
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-screen
+                        | B@ncovinet
+                    li.app__tab__item.has-text-centered.col-4.py-3.px-2.is-size-6.has-text-weight-bold
+                        span.icon.icon-cellphone
+                        | App Móvil
+                // END_TABS
+            section.overflow-hidden.pt-1
+                .h-100.overflow-auto.px-3
+                    div.py-3
+                        h2.is-size-5.has-text-centered.has-text-weight-bold.is-uppercase Nuevas NOTICIAS
+                    .app__jumbotron.mb-3.w-90.mx-auto
+                        .app__jumbotron__header
+                            h3.app__jumbotron__header__title.has-text-centered.has-text-weight-bold Crear nueva noticia
+                        .app__jumbotron__body
+                            .d-flex.flex-wrap.justify-content-center
+                                .col-2.p-3
+                                    label
+                                        span.has-text-centered.d-block Código correlativo:
+                                        input.app__form__control.is-lite.has-border-primary.w-100 
+                                .col-4.p-3
+                                    label
+                                        span.has-text-centered.d-block Titulo: 
+                                        input.app__form__control.is-lite.has-border-primary.w-100 
+                                .col-3.p-3
+                                    label
+                                        span.has-text-centered.d-block Fecha:
+                                        input.app__form__control.is-lite.has-border-primary.w-100(type="date")
+                                .col-3.p-3
+                                    label
+                                        span.has-text-centered.d-block Estado:
+                                        select.app__form__control.is-lite.has-border-primary.w-100
+                                            option(value="1") Activo
+                                            option(value="1") Bloqueado
+                                            option(value="1") Cancelado
+                                            option(value="1") Eliminado
+                                            option(value="1") Deshabilitado
+                                .col-6.p-3
+                                    label
+                                        span.has-text-centered.d-block URL de imagen: 
+                                        input.app__form__control.is-lite.has-border-primary.w-100 
+                                .col-6.p-3
+                                    label
+                                        span.has-text-centered.d-block URL de noticia:
+                                        input.app__form__control.is-lite.has-border-primary.w-100 
+                                .col-12.p-3
+                                    div.has-border-primary.has-background-white.rounded.overflow-hidden
+                                        <ng-quill-editor ng-model="title" on-editor-created="editorCreated(editor)" on-content-changed="contentChanged(editor, html, text)">
+                                        </ng-quill-editor>
+                            .col-2.mx-auto
+                                +button("Crear", "", "is-primary w-100")
+
+                    .has-text-centered.mb-3
+                        h2.is-size-5.has-text-centered.has-text-weight-bold.has-text-primary Noticias creadas
+
+                    div.w-90.mx-auto
+                        table.app__table.is-primary.w-100.has-border-radius
+                            thead
+                                tr
+                                    th(align="center") Código correlativo
+                                    th(align="center") Título
+                                    th(align="center") Fecha
+                                    th(align="center") Estado
+                                    th(align="center") URL de imagen
+                                    th(align="center") URL de noticia
+                                    th(align="center") Acciones
+                            tbody
+                                tr
+                                    td(align="center") 001
+                                    td(align="center") 
+                                        span.has-text-nowrap.has-text-ellipsis.mw-p-200
+                                            | https://myimagsdfsdfsdf sdfsdfdsfsdfsdfsdf dsf sdf dsf
+                                    td(align="center") 
+                                        span.has-text-nowrap 20 // 11 // 2019
+                                    td(align="center") Activa
+                                    td(align="center") 
+                                        span.has-text-nowrap.has-text-ellipsis.mw-p-200
+                                            | https://myimagsdfsdfsdf sdfsdfdsfsdfsdfsdf dsf sdf dsf
+                                    td(align="center") 
+                                        span.has-text-ellipsis.mw-p-200
+                                            | https://myimagsdfsdfsdf sdfsdfdsfsdfsdfsdf dsf sdf dsf
+
+                                    td(align="center") 
+                                        .d-flex.justify-content-center
+                                            +button('', 'icon-edit mx-0 is-size-3', 'is-transparent')
+                                            +button('', 'icon-bin mx-0 is-size-3', 'is-transparent')    
+
+    script(src="//code.angularjs.org/1.5.8/angular.min.js")
+    script(src="//cdn.quilljs.com/1.2.0/quill.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ng-quill/2.2.1/ng-quill.min.js")
+    script. 
+        var myAppModule = angular.module('quillTest', ['ngQuill']);
+        myAppModule.config(['ngQuillConfigProvider', function (ngQuillConfigProvider) {
+            ngQuillConfigProvider.set();
+        }]);
+        myAppModule.controller('AppCtrl', [
+            '$scope',
+            '$timeout',
+            function($scope, $timeout) {
+                $scope.title = '';
+                $scope.changeDetected = false;
+
+                $scope.editorCreated = function (editor) {
+                    console.log(editor);
+                };
+                $scope.contentChanged = function (editor, html, text) {
+                    $scope.changeDetected = true;
+                    console.log('editor: ', editor, 'html: ', html, 'text:', text);
+                };
+            }
+        ]);
+
